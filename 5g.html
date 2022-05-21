@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bangalore Houses</title>
+</head>
+
+<body onload="loadMap()">
+    <h2>Cars Showrooms</h2>
+    <div id="map" style="width:640px; height:480px;"></div>
+    <script>
+        // fake JSON call
+        function getJSONMarkers() {
+            const markers = [{
+                name: "BMW",
+                location: [21.15199, 72.76275]
+            }, {
+                name: "MINI",
+                location: [21.15318, 72.76292]
+            }, {
+                name: "Mustang",
+                location: [21.16810, 72.82963]
+            }];
+            return markers;
+        }
+
+        function loadMap() {
+            // Initialize Google Maps
+            const mapOptions = {
+                center: new google.maps.LatLng(25.2048, 55.2708),
+                zoom: 11
+            }
+            const map = new google.maps.Map(document.getElementById("map"),
+                mapOptions);
+            // Load JSON Data
+            const hotelMarkers = getJSONMarkers();
+            // Initialize Google Markers
+            for (hotel of hotelMarkers) {
+                let marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(hotel.location[0], hotel.location[1]),
+                    title: hotel.name
+                })
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</body>
+
+</html>

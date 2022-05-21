@@ -1,0 +1,26 @@
+{
+    "Cars": {
+        "model": [
+            {
+                "name": "Renault Kiger",
+                "color": "White",
+                "amount": "115,000"
+            },
+            {
+                "name": "Maruti Suzuki Ertiga",
+                "color": "Pink",
+                "amount": "95,000"
+            },
+            {
+                "name": "BMW X4",
+                "color": "Yellow",
+                "amount": "195,000"
+            },
+            {
+                "name": "Lexus NX",
+                "color": "Blue",
+                "amount": "265,000"
+            }
+        ]
+    }
+}

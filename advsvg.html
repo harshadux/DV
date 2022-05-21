@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html> -->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>SVG Canvas Advance Shapes</title>
+
+</head>
+
+<body>
+
+    <svg width="500" height="500">
+        
+        <text x="50" y="30" style="fill:rgb(34, 68, 95); font-size:20px;">
+         
+            Advanced Shapes in SVG Canvas
+        
+        </text>
+        
+        <defs>
+        
+        <filter id="p2" x="0" y="0">
+        
+        <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+        
+        </filter>
+        
+        </defs>
+        
+        <rect x="50" y="100" width="120" height="120" stroke="green" stroke-width="3" fill="purple" filter="url(#p2)" />
+        
+        <rect x="250" y="-150" width="150" height="100" transform="rotate(45)" style="fill: rgba(255, 128, 0, 0.959);"/>
+        
+        <text x="270" y="-30" transform="rotate(45)" style="fill:rgb(3, 149, 233); font-size:15px;">
+        
+        Rotated Reactangle
+        
+        </text>
+        
+        </svg>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Read Data from Text File into Array and Output as List</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>Put data from text file into HTML Table </h1>
+    <div>
+        <ul id="fileData">
+        </ul>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $.get('car.txt', function(theData) {
+            // theItems = theData.split('\n');
+            // var theList = '';
+            // var theListItem;
+
+            // for (i = 0; i < theItems.length; i++) {
+            //     theListItem = theItems[i];
+            //     theList = theList + theListItem;
+            // };
+            $('#fileData').html(theList);
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,218 @@
+<html>
+
+<head>
+    <title>Information Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            display: grid;
+            grid-template-columns: 600px 600px 600px;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Price', 'no.ofcars'],
+                [39.07, 1056],
+                [120, 2600],
+                [62, 1440],
+                [95, 1521],
+                [51, 1200],
+                [38, 1170],
+                [204, 2732],
+                [600, 3300],
+                [63.25, 1310],
+                [370, 1020],
+                [70, 1800],
+                [295, 2785],
+            ]);
+
+            var options = {
+                title: 'Total cars feet vs Price comparison',
+                hAxis: {
+                    title: 'Price',
+                    minValue: 0,
+                    maxValue: 15
+                },
+                vAxis: {
+                    title: 'Total Price',
+                    minValue: 0,
+                    maxValue: 15
+                },
+                legend: 'none'
+            };
+
+            var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['car', 'price'],
+                ['BMW', 4545454],
+                ['Toyota', 64545452],
+                ['Maruti', 54545454],
+                ['Renault', 54545454],
+                ['Jaguar', 4545545],
+                ['Rolls Royce', 604240],
+                ['Mini', 6346456],
+                ['Mustang', 3700000],
+            ]);
+
+            var options = {
+                title: 'total no. of cars'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['car', 'price_in_lakh', 'feet'],
+                ['BMW', 45, 14.52],
+                ['Toyota', 64, 12.2],
+                ['Maruti', 54, 14.2],
+                ['Renault', 54, 16.2],
+                ['Jaguar', 52, 17.2],
+                ['Rolls Royce', 64, 18.2],
+                ['Mini', 66, 19.2],
+                ['Mustang', 99, 14.52],
+            ]);
+
+            var options = {
+                title: 'Car , Car Feet and Price',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['car', 'price_in_lakh', 'feet'],
+                ['BMW', 45, 14.52],
+                ['Toyota', 64, 12.2],
+                ['Maruti', 54, 14.2],
+                ['Renault', 54, 16.2],
+            ]);
+
+            var options = {
+                title: 'Car Pricewise Comparison',
+                hAxis: {
+                    title: 'Society',
+                    titleTextStyle: {
+                        color: '#fffff1'
+                    }
+                },
+                vAxis: {
+                    minValue: 0
+                }
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/cha
+rts/loader.js"></script>
+
+    <script>
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['car', 'price'],
+                ['BMW', 4545454],
+                ['Toyota', 64545452],
+                ['Maruti', 54545454],
+                ['Renault', 54545454],
+                ['Jaguar', 4545545],
+                ['Rolls Royce', 604240],
+                ['Mini', 6346456],
+                ['Mustang', 3700000],
+            ]);
+
+
+            var options = {
+                title: 'Cars',
+                legend: {
+                    position: 'none'
+                },
+            };
+            var chart = new google.visualization.Histogram(document.getElementById('chart_div3'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    <body>
+
+
+
+        <div class="wrapper">
+            <div>
+                <div id="chart_div" style="width: 500px; height: 500px;">
+                </div>
+            </div>
+            <div>
+                <div id="piechart" style="width: 600px; height: 500px;">
+                </div>
+            </div>
+            <div>
+                <div id="chart_div3" style="width: 800px; height: 500px;">
+                </div>
+            </div>
+            <div>
+                <div id="chart_div2" style="width: 600px; height: 500px;"></div>
+            </div>
+            <div>
+                <div id="curve_chart" style="width: 1200px; height: 500px"></div>
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>

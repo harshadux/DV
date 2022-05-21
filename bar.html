@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function() {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+
+                    text: "BAR CHART OF NO OF CARS"
+
+                },
+
+                data: [
+
+                    {
+
+                        type: "bar",
+                        dataPoints: [
+
+                            {
+                                y: 10000,
+                                label: "Renault"
+                            },
+
+                            {
+                                y: 15020,
+                                label: "BMW"
+                            },
+
+                            {
+                                y: 20020,
+                                label: "Maruti"
+                            },
+
+                            {
+                                y: 30320,
+                                label: "Lexus"
+                            },
+
+                        ]
+
+                    },
+
+                ]
+
+            });
+
+            chart.render();
+
+        }
+    </script>
+
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+
+    </div>
+
+</body>
+
+</html>

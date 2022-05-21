@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        svg {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .fc1 {
+            fill: violet;
+        }
+        
+        .fc2 {
+            fill: hotpink;
+        }
+        
+        .fc3 {
+            fill: lavender;
+        }
+        
+        .fc4 {
+            fill: skyblue;
+        }
+        
+        svg path {
+            fill: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <svg id=svg>
+        <defs>
+        <g id="flower">
+            <path class="fc1" fill="none" stroke="#333333" stroke-width="1" 
+                  d="M0,0 q50,-25 100,0 q-50,25 -100,0 q-50,25 -100,0 q50,-25 100,0"/>	
+            <path class="fc2" fill="none" stroke="#333333" stroke-width="1"
+                        d="M0,0 q53.03,-17.68 70.71,-70.71 q-53.03,17.68 -70.71,70.71 q-53.03,17.68 -70.71,70.71 q53.03,-17.68 70.71,-70.71"/>
+            <path class="fc3" fill="none" stroke="#333333" stroke-width="1"
+                      d="M0,0 q25,-50 0,-100 q-25,50 0,100 q-25,50 0,100 q25,-50 0,-100"/>
+            <path class="fc4" fill="none" stroke="#333333" stroke-width="1"
+                      d="M0,0 q-17.68,-53.03 -70.71,-70.71 q17.68,53.03 70.71,70.71 q17.68,53.03 70.71,70.71 q-17.68,-53.03 -70.71,-70.71"/>
+        </g>
+        </defs>
+    </svg>
+</body>
+
+</html>

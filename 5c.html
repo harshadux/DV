@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Using Google Chart API</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {
+            packages: ['corechart']
+        });
+    </script>
+    <script>
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(
+                [
+                    ['car', 'price'],
+                    ['BMW', 4545454],
+                    ['Toyota', 64545452],
+                    ['Maruti', 54545454],
+                    ['Renault', 54545454],
+                    ['Jaguar', 4545545],
+                    ['Rolls Royce', 604240],
+                    ['Mini', 6346456],
+                    ['Mustang', 3700000],
+                ]);
+            var options = {
+                title: "total no of cars in world",
+                is3D: true,
+                titleTextStyle: {
+                    fontSize: 20,
+                }
+            };
+            var chart = new google.visualization.PieChart(
+                document.getElementById('container'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container" style="width:900px ;height:500px;"></div>
+</body>
+</html

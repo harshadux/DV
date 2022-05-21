@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chart using XML Data</title>
+    <script type="text/javascript" src="https://canvasjs.com/assets/scrip
+t/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/scrip
+t/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var dataPoints = [];
+            $.get("car_data.xml", function(data) {
+                $(data).find("point").each(function() {
+                    var $dataPoint = $(this);
+                    var x = $dataPoint.find("x").text();
+                    var y = $dataPoint.find("y").text();
+                    dataPoints.push({
+                        x: parseFloat(x),
+                        y: parseFloat(y)
+                    });
+                });
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    title: {
+                        text: "Chart Using XML CAR Data",
+                    },
+                    data: [{
+                        type: "column",
+                        dataPoints: dataPoints,
+                    }]
+                });
+                chart.render();
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="width:900px; height:500px;"></div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Cars>
+    <model>
+	  <name>Renault Kiger</name>
+	  <color>White</color>
+	  <amount>115,000</amount>
+	</model>
+    <model>
+	  <name>Maruti Suzuki Ertiga</name>
+	  <color>Pink</color>
+	  <amount>95,000</amount>
+	</model>
+    <model>
+	  <name>BMW X4</name>
+	  <color>Yellow</color>
+	  <amount>195,000</amount>
+	</model>
+    <model>
+	  <name>Lexus NX</name>
+	  <color>Blue</color>
+	  <amount>265,000</amount>
+	</model>
+  </Cars>

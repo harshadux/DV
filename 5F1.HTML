@@ -1,0 +1,50 @@
+Column Chart:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter Chart Using Google Chart API</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {
+            packages: ['corechart']
+        });
+    </script>
+    <script>
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(
+                [
+                    ['car', 'price_in_lakh', 'feet'],
+                    ['BMW', 45, 14.52],
+                    ['Toyota', 64, 12.2],
+                    ['Maruti', 54, 14.2],
+                    ['Renault', 54, 16.2],
+                    ['Jaguar', 52, 17.2],
+                    ['Rolls Royce', 64, 18.2],
+                    ['Mini', 66, 19.2],
+                    ['Mustang', 99, 14.52],
+                ]);
+            var options = {
+
+                title: "total no of cars in world",
+                titleTextStyle: {
+                    fontSize: 20,
+                }
+            };
+            var chart = new google.visualization.ColumnChart(
+                document.getElementById('container'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container" style="width:900px ;height:500px;"></div>
+</body>
+
+</html>

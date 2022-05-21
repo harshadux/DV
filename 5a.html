@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart Using Google Chart API</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {
+            packages: ['corechart']
+        });
+    </script>
+    <script>
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(
+                [
+                    ['carname', 'price', {
+                        role: "style"
+                    }],
+                    ['BMW', 4545454, "darkblue"],
+                    ['Toyota', 64545452, "darkgreen"],
+                    ['Maruti', 54545454, "darkblue"],
+                    ['Renault', 54545454, "darkgreen"],
+                    ['Jaguar', 4545545, "darkblue"],
+                    ['Rolls Royce', 604240, "darkgreen"],
+                    ['Mini', 6346456, "darkblue"],
+                    ['Mustang', 3700000, "darkgreen"],
+                ]);
+            var options = {
+                title: "Car price according to Brand",
+                bar: {
+                    groupWidth: "80%"
+                },
+                legend: {
+                    position: "none"
+                },
+                titleTextStyle: {
+                    fontSize: 20,
+                },
+            };
+            var chart = new google.visualization.BarChart(
+                document.getElementById('container'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container" style="width:900px; height:500px;"></div>
+</body>
+
+</html>

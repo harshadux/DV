@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function drawCar(context) {
+            // Set color of car as red
+            context.strokeStyle = "purple";
+            // These lines for bonnet and  body of car
+            i = 0;
+            context.moveTo(0 + i, 300, );
+            context.lineTo(210 + i, 300);
+            context.moveTo(50 + i, 300);
+            context.lineTo(75 + i, 270);
+            context.moveTo(75 + i, 270);
+            context.lineTo(150 + i, 270);
+            context.moveTo(150 + i, 270);
+            context.lineTo(165 + i, 300);
+            context.moveTo(0 + i, 300);
+            context.lineTo(0 + i, 330);
+            context.moveTo(210 + i, 300);
+            context.lineTo(210 + i, 330);
+
+            // For left wheel of car
+            context.arc(65 + i, 330, 15, 0, 2 * Math.PI, false);
+            context.arc(65 + i, 330, 2, 0, 2 * Math.PI, false);
+            // For right wheel of car
+            context.arc(145 + i, 330, 15, 0, 2 * Math.PI, false);
+            context.arc(145 + i, 330, 2, 0, 2 * Math.PI, false);
+            // Line left of left wheel
+            context.moveTo(0 + i, 330);
+            context.lineTo(50 + i, 330);
+            // Line middle of both wheel
+            context.moveTo(80 + i, 330);
+            context.lineTo(130 + i, 330);
+            // Line right of right wheel
+            context.moveTo(210 + i, 330);
+            context.lineTo(160 + i, 330);
+            context.stroke();
+        }
+        window.onload = function() {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            drawCar(context);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="5000" height="3000"></canvas>
+</body>
+
+</html>
